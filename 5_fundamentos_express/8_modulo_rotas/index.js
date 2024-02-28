@@ -1,0 +1,31 @@
+const express = require("express");
+const app = express();
+const port = 3000;
+
+const path = require("path");
+
+const users = require("./users");
+
+//ler o body
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
+app.use(express.json());
+
+const basePath = path.join(__dirname, "templates");
+
+app.use("/users", users);
+
+app.get("/", (req, res) => {
+  //req é basicamente qualquer dado enviado ou acessado pelo cliente
+  //o que enviamos para o usuário
+
+  res.sendFile(`${basePath}/index.html`);
+}); //primeiro argumento a url
+
+app.listen(port, () => {
+  console.log("rodando server");
+});
