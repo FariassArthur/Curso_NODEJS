@@ -1,0 +1,16 @@
+body {
+    background-color: #aaaaaa;
+    color: #fffaaa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+p {
+    text-align: justify;
+
+    width: 50%;
+}
