@@ -1,0 +1,17 @@
+<div id="book-page">
+  <a href="/books">Voltar</a>
+  {{#if books}}
+    <!-- Verifica se há livros -->
+    <div class="container">
+      <h1>{{books.0.title}}</h1>
+      <!-- Acessa o título do primeiro livro -->
+      <p>Este livro tem {{books.0.pages}} páginas</p>
+      <!-- Acessa as páginas do primeiro livro -->
+      <p>Seu id é {{books.0.id}}</p>
+      <!-- Acessa o ID do primeiro livro -->
+    </div>
+
+  {{else}}
+    <p>Nenhum livro encontrado</p>
+  {{/if}}
+</div>
