@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize("nodemvc", "postgres", "261014", {
+const sequelize = new Sequelize("nodemvc", "postgres", "50261014", {
   host: "localhost",
   dialect: "postgres",
 });
